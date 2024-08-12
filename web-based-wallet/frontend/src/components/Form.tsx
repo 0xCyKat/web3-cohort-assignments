@@ -35,7 +35,7 @@ const Form = () => {
         </div>
         <div className="flex flex-col items-center w-full sm:flex-row">
           <input
-            value={mnemonic}
+            value={mnemonic || ""}
             type="text"
             placeholder="Enter mnemonic"
             className="border border-1 border-black p-2 rounded-lg m-2 w-full font-poppins"
@@ -65,6 +65,7 @@ const Form = () => {
               strokeWidth={1.5}
               stroke="currentColor"
               className="size-5 mx-2 cursor-pointer"
+              onClick={() => navigator.clipboard.writeText(mnemonic)}
             >
               <path
                 strokeLinecap="round"
