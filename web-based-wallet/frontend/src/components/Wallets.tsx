@@ -13,11 +13,11 @@ const Wallets = () => {
           wallets.map((wallet, index) => (
             <div
               key={index}
-              className="p-3 m-2 rounded-lg shadow-md border-black"
+              className="p-3 rounded-lg shadow-md border-black m-2 break-all "
             >
               <span className="">
-                <span className="font-semibold">Public Key - </span>
-                <span className="font-poppins">{wallet.publicKey}</span>
+                <span className="font-semibold">Address - </span>
+                <span className="font-poppins">{wallet.address}</span>
               </span>
               <br />
               <span>

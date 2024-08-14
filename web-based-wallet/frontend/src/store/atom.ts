@@ -1,5 +1,5 @@
 import { atom } from 'recoil';
-import { Wallet } from '../utils/utils';
+import { Wallet, WalletType } from '../utils/constants';
 
 export const countState = atom<number>({
     key: 'countState',
@@ -14,4 +14,10 @@ export const mnemonicState = atom<string>({
 export const walletsState = atom<Wallet[]>({
     key: 'walletsState',
     default: []
+});
+
+
+export const selectedWalletState = atom<WalletType>({
+    key: 'selectedWalletState',
+    default: WalletType.SOL
 });
